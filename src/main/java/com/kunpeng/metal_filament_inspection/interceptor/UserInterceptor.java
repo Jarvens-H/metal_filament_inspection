@@ -1,20 +1,18 @@
 package com.kunpeng.metal_filament_inspection.interceptor;
 
 
-import com.kunpeng.metal_filament_inspection.domain.dto.UserDTO;
 import com.kunpeng.metal_filament_inspection.utils.JwtUtil;
 import com.kunpeng.metal_filament_inspection.utils.UserHolder;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.Nullable;
 import org.springframework.web.servlet.HandlerInterceptor;
 @Slf4j
-public class LoginInterceptor implements HandlerInterceptor {
+public class UserInterceptor implements HandlerInterceptor {
     private final JwtUtil jwtUtil;
-    public LoginInterceptor(JwtUtil jwtUtil) {
+    public UserInterceptor(JwtUtil jwtUtil) {
         this.jwtUtil = jwtUtil;
     }
     @Override
